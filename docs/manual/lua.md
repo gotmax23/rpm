@@ -27,7 +27,7 @@ The point? Remember, Lua is embedded in rpm. This means the Lua scriptlets run i
  * Syntax errors in <lua> scripts are detected at package build time.
  * As it runs in within the rpm process context, it can do things that external process cannot do, such as define new macros. 
 
-Scriptlet arguments are accessible from a global 'arg' table. Note: in Lua, indexes customarily start at 1 (one) instead of 0 (zero), and for the better or worse, the rpm implementation follows this practise. Thus the scriptlet arg indexes are off by one from general expectation based on traditional scriptlet arguments. The argument containing number of installed package instances is arg[2] and the similar argument for trigger targets is arg[3], whereas traditionally they are 1 and 2 (eg $1 and $2 in shell scripts).
+Scriptlet arguments are accessible from a global 'arg' table. Note: in Lua, indexes customarily start at 1 (one) instead of 0 (zero), and for the better or worse, the rpm implementation follows this practice. Thus the scriptlet arg indexes are off by one from general expectation based on traditional scriptlet arguments. The argument containing number of installed package instances is arg[2] and the similar argument for trigger targets is arg[3], whereas traditionally they are 1 and 2 (eg $1 and $2 in shell scripts).
 
 Scriptlets of relocatable packages additionally carry a global
 `RPM_INSTALL_PREFIX` table containing all the possible prefixes of the
